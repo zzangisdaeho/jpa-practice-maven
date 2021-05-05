@@ -18,7 +18,9 @@
             <!-- 쿼리 출력 시 주석(comments)도 함께 출력 -->
             <property name="hibernate.use_sql_comments" value="true"/>
             <!-- 애플리케이션 실행 시점에 데이터베이스 테이블 자동 생성 -->
-<!--            <property name="hibernate.hbm2ddl.auto" value="create"/>-->
+<!--            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>-->
+            <!-- hibernate batch -->
+            <property name="hibernate.jdbc.batch_size" value="10"/>
         </properties>
     </persistence-unit>
 </persistence>
