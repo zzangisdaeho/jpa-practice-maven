@@ -15,8 +15,10 @@ public class JpaMain {
         EntityManager em = emf.createEntityManager();
 
         EntityTransaction tx = em.getTransaction();
+
+        //EntityManager는 데이터 변경시 트랜잭션을 실행해야한다.
+        //반대로 말하면 변경 안할때(Read)는 트랜잭션이 없어도 된다.
         tx.begin();
-        //code
 
         try {
 //            쿼리는 JPQL
@@ -51,8 +53,8 @@ public class JpaMain {
 
         EntityManager em2 = emf.createEntityManager();
         Member member = em2.find(Member.class, 2L);
-        em2.clear();
-        Member member2 = em2.find(Member.class, 2L);
+//        em2.clear();
+//        Member member2 = em.find(Member.class, 2L);
 
         System.out.println(member);
 
