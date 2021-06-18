@@ -51,12 +51,13 @@ public class JpaMain {
             em.close();
         }
 
-        EntityManager em2 = emf.createEntityManager();
-        Member member = em2.find(Member.class, 2L);
+//        EntityManager em2 = emf.createEntityManager();
+//        Member member = em2.find(Member.class, 2L);
+//        System.out.println(member);
 //        em2.clear();
-//        Member member2 = em.find(Member.class, 2L);
+        Member member2 = em.find(Member.class, 2L);
+        System.out.println(member2);
 
-        System.out.println(member);
 
 
 
